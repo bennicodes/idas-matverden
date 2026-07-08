@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/images/logo-removebg.png";
+import logo from "../../assets/images/logo-idasmatverden.jpg";
 import styles from "./Navbar.module.css";
 
 const links = [
@@ -16,10 +16,10 @@ const Navbar = () => {
     <header className={styles.header}>
       <div className={styles.bar}>
         <NavLink to="/" className={styles.logo} onClick={() => setOpen(false)}>
-          <span className={styles.logoText}>Idas Matverden</span>
           <span className={styles.logoBadge}>
             <img src={logo} alt="" className={styles.logoImg} />
           </span>
+          <span className={styles.logoText}>Idas Matverden</span>
         </NavLink>
 
         <button
