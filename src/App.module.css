@@ -1,0 +1,26 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+  min-height: 100vh;
+  background-color: var(--color-page-bg);
+}
+
+.main {
+  flex: 1;
+  background-color: var(--color-bg);
+  margin: var(--spacing-3xl);
+  box-shadow: 0 6px 20px rgba(46, 42, 36, 0.12);
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    margin: var(--spacing-xl);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin: var(--spacing-lg);
+  }
+}

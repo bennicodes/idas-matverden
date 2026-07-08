@@ -1,0 +1,148 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.bar {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  height: var(--navbar-height);
+  padding: 0 var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+}
+
+.logoBadge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--color-bg);
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Beskjærer til øvre del av logoen (kokkelue/medaljong),
+     og skjuler tekstraden "IDAS MATVERDEN" som ellers blir uleselig så liten. */
+  object-position: 50% 15%;
+  transform: scale(1.8);
+}
+
+/* Hamburger - synlig kun på mobil */
+.menuButton {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: var(--spacing-sm);
+  cursor: pointer;
+}
+
+.menuLine {
+  width: 22px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+}
+
+.nav {
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-line);
+  padding: var(--spacing-md);
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.navOpen {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-text);
+  padding: var(--spacing-sm) 0;
+  font-size: var(--text-md);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.link:last-child {
+  border-bottom: none;
+}
+
+.linkActive {
+  color: var(--color-primary);
+}
+
+/* Tablet/desktop: horisontal meny, ingen hamburger */
+@media (min-width: 720px) {
+  .menuButton {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    flex-direction: row;
+    gap: var(--spacing-lg);
+    background: transparent;
+    border: none;
+    padding: 0;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .link {
+    border-bottom: none;
+    padding: 0;
+    position: relative;
+  }
+
+  .link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 180ms ease;
+  }
+
+  .link:hover::after,
+  .linkActive::after {
+    width: 100%;
+  }
+}

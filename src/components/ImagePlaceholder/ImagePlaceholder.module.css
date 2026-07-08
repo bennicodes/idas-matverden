@@ -1,0 +1,31 @@
+.frame {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--color-line);
+  background:
+    repeating-linear-gradient(
+      135deg,
+      var(--color-bg-alt),
+      var(--color-bg-alt) 10px,
+      var(--color-bg) 10px,
+      var(--color-bg) 20px
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.landscape {
+  aspect-ratio: 16 / 9;
+}
+
+.square {
+  aspect-ratio: 1 / 1;
+}
+
+.label {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  padding: var(--spacing-sm);
+}

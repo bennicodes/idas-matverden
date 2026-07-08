@@ -1,0 +1,26 @@
+.footer {
+  border-top: 1px solid var(--color-line);
+  padding: var(--spacing-xl) var(--spacing-md);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.text {
+  font-size: var(--text-sm);
+}
+
+.credit {
+  display: inline-block;
+  margin-top: var(--spacing-xs);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 180ms ease;
+}
+
+.credit:hover,
+.credit:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+}
