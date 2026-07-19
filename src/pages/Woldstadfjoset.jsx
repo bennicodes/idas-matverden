@@ -185,7 +185,7 @@ const menyAccordion = [
     content: (
       <>
         <p className={styles.accordionNote}>
-          Minimum 10 personer · 595 kr pr. person
+          Minimum 10 personer · 595 kr pr. person · ca. 700 g pr. person
         </p>
         <p className={styles.accordionText}>
           Serveres med frisk salat med mye godt, focaccia, aioli & chilimajo.
@@ -201,11 +201,21 @@ const menyAccordion = [
   },
   {
     title: "Gryter",
-    content: <PrisListe items={gryter} note="Minimum 10 personer" />,
+    content: (
+      <PrisListe
+        items={gryter}
+        note="Minimum 10 personer · ca. 450 g pr. person"
+      />
+    ),
   },
   {
     title: "Supper",
-    content: <PrisListe items={supper} note="Minimum 10 personer" />,
+    content: (
+      <PrisListe
+        items={supper}
+        note="Minimum 10 personer · ca. 5,5 dl pr. person"
+      />
+    ),
   },
   {
     title: "Salater",
