@@ -65,6 +65,8 @@ const tapasValg = [
   "Caprese med balsamico & basilikum",
   "Fylt vaffel med røkt laks & rogn",
   "Asian style ribbe",
+  "Spareribs",
+  "Maiskolber",
   "Pulled pork",
   "Rekecocktail",
   "Dirty tacokjøtt med mørbrad",
