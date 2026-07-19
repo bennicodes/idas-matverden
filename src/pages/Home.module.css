@@ -165,41 +165,6 @@
   margin-bottom: var(--spacing-3xl);
 }
 
-.menuList {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-}
-
-.menuItem {
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-line);
-  border-radius: var(--radius-md);
-  padding: var(--spacing-lg);
-}
-
-.menuItemHead {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
-  margin-bottom: var(--spacing-sm);
-}
-
-.menuItemTitle {
-  font-size: var(--text-lg);
-}
-
-.menuItemPrice {
-  color: var(--color-primary);
-  font-weight: 500;
-  font-size: var(--text-sm);
-}
-
-.menuItemDesc {
-  color: var(--color-text-muted);
-}
-
 .venue {
   text-align: center;
   max-width: 60ch;
@@ -246,14 +211,7 @@
 .callButton:hover,
 .callButton:focus-visible {
   background: var(--color-primary-hover);
-}
-
-@media (min-width: 640px) {
-  .menuItemHead {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-  }
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {

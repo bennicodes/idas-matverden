@@ -1,8 +1,22 @@
 .footer {
   border-top: 1px solid var(--color-line);
-  padding: var(--spacing-xl) var(--spacing-md);
-  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-xl);
   color: var(--color-text-muted);
+  text-align: center;
+}
+
+.footerInner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
 }
 
 .text {
@@ -23,4 +37,106 @@
 .credit:focus-visible {
   opacity: 1;
   text-decoration: underline;
+}
+
+.socialsBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.socials {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.socialsLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  opacity: 0.75;
+}
+
+.socialLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrap {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+}
+
+.iconDefault,
+.iconColor {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--color-primary);
+  transition: opacity 200ms ease;
+}
+
+.iconDefault {
+  opacity: 1;
+}
+
+.iconColor {
+  opacity: 0;
+}
+
+.facebookColor {
+  color: #1877f2;
+}
+
+.socialLink:hover .iconDefault,
+.socialLink:focus-visible .iconDefault {
+  opacity: 0;
+}
+
+.socialLink:hover .iconColor,
+.socialLink:focus-visible .iconColor {
+  opacity: 1;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, -2px);
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm, 4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.socialLink:hover .tooltip,
+.socialLink:focus-visible .tooltip {
+  opacity: 1;
+  transform: translate(-50%, -8px);
+}
+
+@media (min-width: 640px) {
+  .footer {
+    text-align: left;
+  }
+
+  .footerInner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .info {
+    align-items: flex-start;
+  }
 }

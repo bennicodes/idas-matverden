@@ -31,7 +31,7 @@
 .sectionTitle {
   font-size: var(--text-xl);
   margin-bottom: var(--spacing-lg);
-  color: var(--color-primary)
+  color: var(--color-primary);
 }
 
 .venueSection {
@@ -40,19 +40,141 @@
   text-align: center;
 }
 
-.menuSection {
-  margin-bottom: var(--spacing-3xl);
+.rentalSection {
+  max-width: 900px;
+  margin: 0 auto var(--spacing-2xl);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg);
+  align-items: center;
+  text-align: center;
 }
 
-.kategoriTitle {
-  font-size: var(--text-md);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+.rentalText {
+  height: 100%;
+  max-width: 60ch;
+}
+
+.rentalImageWrap {
+  width: 100%;
+  max-width: 320px;
+  /* flex-basis: 50%; */
+}
+
+.rentalImage {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 720px) {
+  .rentalSection {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    gap: var(--spacing-2xl);
+  }
+
+  .rentalText {
+    flex: 1;
+  }
+
+  .rentalImageWrap {
+    flex: 0 0 auto;
+  }
+}
+
+.romSection {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.romGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+.romCard {
+  text-align: center;
+}
+
+.romImage {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.romPlaceholder {
+  margin-bottom: var(--spacing-sm);
+}
+
+.romTitle {
+  font-size: var(--text-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.romText {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+@media (min-width: 720px) {
+  .romGrid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+}
+
+.priceSection {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.menuSection {
+  margin-bottom: var(--spacing-3xl);
+  scroll-margin-top: var(--navbar-height);
+}
+
+.accordionNote {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.accordionText {
   color: var(--color-text-muted);
   margin-bottom: var(--spacing-sm);
+}
+
+.valgGrid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xs) var(--spacing-lg);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.valgGrid li {
+  padding: 2px 0;
+  border-bottom: 1px dashed var(--color-line);
+}
+
+@media (min-width: 600px) {
+  .valgGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.rettInfo {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
 }
 
 .rettListe {

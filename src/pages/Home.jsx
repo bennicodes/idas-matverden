@@ -1,36 +1,41 @@
 import { Link } from "react-router-dom";
-import bakst from "../assets/images/bakst.jpg";
-import cateringImg from "../assets/images/catering-mat.jpg";
-import fiskegrateng from "../assets/images/fiskegrateng.jpg";
 import ida from "../assets/images/ida.jpg";
-import pavlovaImg from "../assets/images/pavlova.jpg";
-import sjokokakeImg from "../assets/images/sjokokake.jpg";
+import bakst from "../assets/images/idasMatverden/bakst.jpg";
+import cafeUtvalg from "../assets/images/idasMatverden/cafe.jpeg";
+import cateringImg from "../assets/images/idasMatverden/catering-mat.jpg";
+import fiskegrateng from "../assets/images/idasMatverden/fiskegrateng.jpg";
+import pavlovaImg from "../assets/images/idasMatverden/pavlova.jpg";
+import sjokokakeImg from "../assets/images/idasMatverden/sjokokake.jpg";
 import ImageSlider from "../components/ImageSlider/ImageSlider";
+import Seo from "../components/Seo/Seo";
+import {
+  BUSINESS_ADDRESS,
+  BUSINESS_PHONE,
+  SERVICE_AREAS,
+  SITE_URL,
+  SOCIAL_LINKS,
+} from "../config/site";
 import styles from "./Home.module.css";
 
-// --- REDIGER HER ---
-// Bytt ut med Idas faktiske tjenester og priser.
-// "fra" brukes fordi pris ofte varierer med antall gjester.
-const tjenester = [
-  {
-    navn: "Koldtbord",
-    beskrivelse: "Klassisk koldtbord til fest, dåp eller minnestund.",
-    pris: "fra 350 kr / person",
-  },
-  {
-    navn: "Varmmat",
-    beskrivelse: "Varm middag levert eller servert, tilpasset anledningen.",
-    pris: "fra 400 kr / person",
-  },
-  {
-    navn: "Kaker og dessert",
-    beskrivelse: "Bløtkake, dessertfat eller kaffebord.",
-    pris: "fra 150 kr / person",
-  },
-];
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CateringBusiness",
+  name: "Idas Matverden",
+  image: `${SITE_URL}/og-image.jpg`,
+  url: SITE_URL,
+  telephone: BUSINESS_PHONE,
+  address: { "@type": "PostalAddress", ...BUSINESS_ADDRESS },
+  areaServed: SERVICE_AREAS.map((name) => ({ "@type": "City", name })),
+  sameAs: SOCIAL_LINKS,
+};
 
 // --- REDIGER HER --- bilder som roterer i hero-slideren
 const heroBilder = [
+  {
+    src: cafeUtvalg,
+    alt: "Utstilling hos idas matverden",
+    caption: "",
+  },
   {
     src: cateringImg,
     alt: "Koldtbord med reker, spring ruller og tilbehør",
@@ -59,11 +64,18 @@ const heroBilder = [
 ];
 
 // Telefonnummer til Ida - bytt ut med reelt nummer.
-const TELEFON = "000 00 000";
+const TELEFON = "959 00 208";
 
 const Home = () => {
   return (
     <div className={styles.wrap}>
+      <Seo
+        title="Idas Matverden"
+        description="Idas Matverden leverer catering til fest og hverdag i Isfjorden og Åndalsnes - koldtbord, varmmat og dessert laget med hjerte for anledningen din."
+        path="/"
+        jsonLd={jsonLd}
+      />
+
       <div className={styles.heroWrap}>
         <header className={styles.hero}>
           <div className={styles.titleContainer}>
@@ -74,8 +86,9 @@ const Home = () => {
             </p>
           </div>
           <p className={styles.lead}>
-            Catering til fest og hverdag i Isfjorden - fra koldtbord til
-            bryllupsmiddag, laget med hjerte for anledningen din.
+            Catering til fest og hverdag i Isfjorden og Åndalsnes - fra
+            koldtbord til bryllupsmiddag, laget med hjerte for anledningen
+            din.
           </p>
         </header>
 
@@ -99,7 +112,12 @@ const Home = () => {
             </p>
           </div>
           <div className={styles.imageContainer}>
-            <img src={ida} alt="Ida. Eier av idas matverden" />
+            <img
+              src={ida}
+              alt="Ida. Eier av idas matverden"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
@@ -111,27 +129,26 @@ const Home = () => {
           kontakt for et konkret tilbud.
         </p>
 
-        <ul className={styles.menuList}>
-          {tjenester.map((t) => (
-            <li key={t.navn} className={styles.menuItem}>
-              <div className={styles.menuItemHead}>
-                <h3 className={styles.menuItemTitle}>{t.navn}</h3>
-                <span className={styles.menuItemPrice}>{t.pris}</span>
-              </div>
-              <p className={styles.menuItemDesc}>{t.beskrivelse}</p>
-            </li>
-          ))}
-        </ul>
+        <Link to="/woldstadfjoset#meny" className={styles.callButton}>
+          Se hele menyen →
+        </Link>
 
         <div className={styles.gallery}>
           <figure className={styles.galleryItem}>
-            <img src={pavlovaImg} alt="Pavlova med bær og spiselige blomster" />
+            <img
+              src={pavlovaImg}
+              alt="Pavlova med bær og spiselige blomster"
+              loading="lazy"
+              decoding="async"
+            />
             <figcaption>Pavlova med sesongens bær</figcaption>
           </figure>
           <figure className={styles.galleryItem}>
             <img
               src={sjokokakeImg}
               alt="Sjokoladekake med makroner og sjokolade"
+              loading="lazy"
+              decoding="async"
             />
             <figcaption>Sjokoladekake til feiring</figcaption>
           </figure>
