@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
 import ida from "../assets/images/ida.jpg";
-import bakst from "../assets/images/idasMatverden/bakst.jpg";
-import cafeUtvalg from "../assets/images/idasMatverden/cafe.jpeg";
-import cateringImg from "../assets/images/idasMatverden/catering-mat.jpg";
-import fiskegrateng from "../assets/images/idasMatverden/fiskegrateng.jpg";
 import pavlovaImg from "../assets/images/idasMatverden/pavlova.jpg";
 import sjokokakeImg from "../assets/images/idasMatverden/sjokokake.jpg";
 import ImageSlider from "../components/ImageSlider/ImageSlider";
@@ -15,6 +11,7 @@ import {
   SITE_URL,
   SOCIAL_LINKS,
 } from "../config/site";
+import { heroBilder } from "../data/homeHeroImages";
 import styles from "./Home.module.css";
 
 const jsonLd = {
@@ -28,40 +25,6 @@ const jsonLd = {
   areaServed: SERVICE_AREAS.map((name) => ({ "@type": "City", name })),
   sameAs: SOCIAL_LINKS,
 };
-
-// --- REDIGER HER --- bilder som roterer i hero-slideren
-const heroBilder = [
-  {
-    src: cafeUtvalg,
-    alt: "Utstilling hos idas matverden",
-    caption: "",
-  },
-  {
-    src: cateringImg,
-    alt: "Koldtbord med reker, spring ruller og tilbehør",
-    caption: "",
-  },
-  {
-    src: sjokokakeImg,
-    alt: "Sjokoladekake",
-    caption: "",
-  },
-  {
-    src: fiskegrateng,
-    alt: "Fiskegrateng",
-    caption: "",
-  },
-  {
-    src: pavlovaImg,
-    alt: "Pavlova kake",
-    caption: "",
-  },
-  {
-    src: bakst,
-    alt: "Bakst og kaffe",
-    caption: "",
-  },
-];
 
 // Telefonnummer til Ida - bytt ut med reelt nummer.
 const TELEFON = "959 00 208";
@@ -87,8 +50,7 @@ const Home = () => {
           </div>
           <p className={styles.lead}>
             Catering til fest og hverdag i Isfjorden og Åndalsnes - fra
-            koldtbord til bryllupsmiddag, laget med hjerte for anledningen
-            din.
+            koldtbord til bryllupsmiddag, laget med hjerte for anledningen din.
           </p>
         </header>
 

@@ -42,7 +42,7 @@
 
 .rentalSection {
   max-width: 900px;
-  margin: 0 auto var(--spacing-2xl);
+  margin: 0 auto var(--spacing-xl);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
@@ -58,7 +58,6 @@
 .rentalImageWrap {
   width: 100%;
   max-width: 320px;
-  /* flex-basis: 50%; */
 }
 
 .rentalImage {
@@ -199,6 +198,55 @@
   color: var(--color-primary);
   font-weight: 500;
   white-space: nowrap;
+}
+
+.koldtbordGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 640px) {
+  .koldtbordGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.koldtbordCard {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+}
+
+.koldtbordHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  border-bottom: 1px dashed var(--color-line);
+}
+
+.koldtbordName {
+  font-size: var(--text-md);
+  color: var(--color-primary);
+}
+
+.koldtbordPris {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  white-space: nowrap;
+}
+
+.koldtbordListe {
+  list-style: none;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .contact {
