@@ -9,7 +9,6 @@ import woldstadInngang from "../assets/images/woldstad/woldstad-inngang.jpg";
 import woldstadResturantFjos from "../assets/images/woldstad/woldstad-resturant.jpg";
 import woldstadGård from "../assets/images/woldstad/woldstadfjoset-ute.jpg";
 
-// --- REDIGER HER --- legg til flere bilder av gården etter hvert som de blir tilgjengelig
 export const gaardBilder = [
   {
     src: bryllupSkilt,
