@@ -1,4 +1,4 @@
-import woldstadBryllup from "../assets/images/woldstad/bryllup-lave.jpeg";
+import woldstadBryllup from "../../src/assets/images/woldstad/bryllup-lave.jpeg";
 import Accordion from "../components/Accordion/Accordion";
 import ImagePlaceholder from "../components/ImagePlaceholder/ImagePlaceholder";
 import ImageSlider from "../components/ImageSlider/ImageSlider";
