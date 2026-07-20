@@ -10,9 +10,9 @@ import {
   SITE_URL,
   SOCIAL_LINKS,
 } from "../config/site";
-import { gaardBilder, rom } from "../data/woldstadfjosetGallery";
 import { gryter, koldtbord, salater, supper, tapasValg } from "../data/menu";
 import { cateringTillegg, lokalePriser, servering } from "../data/rental";
+import { gaardBilder, rom } from "../data/woldstadfjosetGallery";
 import styles from "./Woldstadfjoset.module.css";
 
 const jsonLd = {

@@ -1,4 +1,4 @@
-import bryllupSkilt from "../assets/images/woldstad/bryllup-skilt.JPEG";
+import bryllupSkilt from "../assets/images/woldstad/bryllup-skilt.jpeg";
 import woldstadDrivhus from "../assets/images/woldstad/drivhus-woldstad.jpg";
 import woldstadFjos from "../assets/images/woldstad/gard.jpg";
 import sauefjøset from "../assets/images/woldstad/sauefjoset.png";
