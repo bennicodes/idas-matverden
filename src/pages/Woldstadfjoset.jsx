@@ -135,7 +135,7 @@ const Woldstadfjoset = () => {
     <div className={styles.wrap}>
       <Seo
         title="Woldstadfjoset"
-        description="Woldstadfjoset er en gammel gård i Isfjorden, rett ved Åndalsnes, gjort om til restaurant og selskapslokale, med mat fra Idas Matverden. Book til dåp, bryllup eller annet selskap."
+        description="Woldstadfjoset er en gammel gård i Isfjorden, gjort om til restaurant og selskapslokale, med mat fra Idas Matverden. Book til dåp, bryllup eller annet selskap."
         path="/woldstadfjoset"
         image="/og-woldstadfjoset.jpg"
         jsonLd={jsonLd}
@@ -144,9 +144,9 @@ const Woldstadfjoset = () => {
       <header className={styles.hero}>
         <h1 className={styles.title}>Woldstadfjoset</h1>
         <p className={styles.lead}>
-          En gammel gård i Isfjorden, rett ved Åndalsnes, gjort om til
-          restaurant - med mat fra Idas Matverden. Se meny under, eller book
-          hele gården til dåp, bryllup eller annet selskap.
+          En gammel gård i Isfjorden, gjort om til restaurant - med mat fra Idas
+          Matverden. Se meny under, eller book hele gården til dåp, bryllup
+          eller annet selskap.
         </p>
       </header>
 

@@ -34,7 +34,7 @@ const Home = () => {
     <div className={styles.wrap}>
       <Seo
         title="Idas Matverden"
-        description="Idas Matverden leverer catering til fest og hverdag i Isfjorden og Åndalsnes - koldtbord, varmmat og dessert laget med hjerte for anledningen din."
+        description="Idas Matverden leverer catering til fest og hverdag i Isfjorden - koldtbord, varmmat og dessert laget med hjerte for anledningen din."
         path="/"
         jsonLd={jsonLd}
       />
@@ -45,13 +45,9 @@ const Home = () => {
             <h1 className={styles.title}>Idas Matverden</h1>
             <div className={styles.underline}></div>
             <p className={styles.tagline}>
-              Måltider som skaper fellesskap og varige minner.
+              Lager mat med kjærlighet til alle anledninger.
             </p>
           </div>
-          <p className={styles.lead}>
-            Catering til fest og hverdag i Isfjorden og Åndalsnes - fra
-            koldtbord til bryllupsmiddag, laget med hjerte for anledningen din.
-          </p>
         </header>
 
         <div className={styles.heroImage}>

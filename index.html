@@ -9,6 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#8c3b2e" />
 
+    <script>
+      (function () {
+        try {
+          var nav = performance.getEntriesByType("navigation")[0];
+          if (nav && nav.type === "reload" && window.location.hash) {
+            history.replaceState(
+              null,
+              "",
+              window.location.pathname + window.location.search
+            );
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <!--
       title, meta description og robots settes per side av <Seo> (React
       Helmet, se src/components/Seo/Seo.jsx). De skal IKKE stå statisk her
@@ -21,18 +36,18 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Idas Matverden" />
     <meta property="og:locale" content="nb_NO" />
-    <meta property="og:title" content="Idas Matverden | Catering i Isfjorden og Åndalsnes" />
+    <meta property="og:title" content="Idas Matverden | Catering i Isfjorden" />
     <meta
       property="og:description"
-      content="Catering til fest og hverdag i Isfjorden og Åndalsnes - fra koldtbord til bryllupsmiddag, laget med hjerte for anledningen din."
+      content="Catering til fest og hverdag i Isfjorden - fra koldtbord til bryllupsmiddag, laget med hjerte for anledningen din."
     />
     <meta property="og:image" content="/og-image.jpg" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Idas Matverden | Catering i Isfjorden og Åndalsnes" />
+    <meta name="twitter:title" content="Idas Matverden | Catering i Isfjorden" />
     <meta
       name="twitter:description"
-      content="Catering til fest og hverdag i Isfjorden og Åndalsnes - fra koldtbord til bryllupsmiddag, laget med hjerte for anledningen din."
+      content="Catering til fest og hverdag i Isfjorden - fra koldtbord til bryllupsmiddag, laget med hjerte for anledningen din."
     />
     <meta name="twitter:image" content="/og-image.jpg" />
   </head>

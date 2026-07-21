@@ -16,6 +16,4 @@ export const SOCIAL_LINKS = [
   "https://www.instagram.com/idas_matverden/",
 ];
 
-// Isfjorden er lite og lokalt kjent - Åndalsnes er regionsenteret og et mye
-// søkt stedsnavn, så det tas med for å fange opp søk fra et større område.
-export const SERVICE_AREAS = ["Isfjorden", "Åndalsnes"];
+export const SERVICE_AREAS = ["Isfjorden"];
