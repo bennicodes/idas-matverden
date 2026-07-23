@@ -74,7 +74,7 @@ const Navbar = () => {
             >
               <div className={styles.dropdownRow}>
                 <NavLink
-                  to="/woldstadfjoset"
+                  to="/woldstad"
                   className={({ isActive }) =>
                     isActive
                       ? `${styles.link} ${styles.linkActive}`
@@ -82,13 +82,13 @@ const Navbar = () => {
                   }
                   onClick={closeAll}
                 >
-                  Woldstadfjoset
+                  Woldstad
                 </NavLink>
                 <button
                   type="button"
                   className={styles.dropdownToggle}
                   aria-expanded={wolstadOpen}
-                  aria-controls="woldstadfjoset-submeny"
+                  aria-controls="woldstad-submeny"
                   aria-label={
                     wolstadOpen ? "Lukk undermeny" : "Åpne undermeny"
                   }
@@ -98,9 +98,9 @@ const Navbar = () => {
                 </button>
               </div>
 
-              <div id="woldstadfjoset-submeny" className={styles.submenu}>
+              <div id="woldstad-submeny" className={styles.submenu}>
                 <NavLink
-                  to="/woldstadfjoset#meny"
+                  to="/woldstad#meny"
                   className={styles.submenuLink}
                   onClick={closeAll}
                 >

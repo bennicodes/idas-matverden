@@ -17,7 +17,7 @@ export const gaardBilder = [
   },
   {
     src: woldstadFjos,
-    alt: "Woldstadfjoset restaurant i gammelt fjøs",
+    alt: "Woldstad restaurant i gammelt fjøs",
     caption: "",
   },
   {
@@ -64,7 +64,7 @@ export const rom = [
       "Det nyeste lokalet, for grupper på 10-20 personer. Intimt og koselig, kan også brukes som møterom.",
   },
   {
-    navn: "Vørstadloftet",
+    navn: "Vørstaloftet",
     bilde: vørstadloftet,
     tekst:
       "Her har vi hatt ulike arrangement som konserter og dans med god stemning utover seinsommer og høst.",

@@ -19,7 +19,7 @@ const AppLayout = () => {
       <main className={styles.main}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/woldstadfjoset" element={<Woldstadfjoset />} />
+          <Route path="/woldstad" element={<Woldstadfjoset />} />
           <Route path="/markamyra" element={<Markamyra />} />
         </Routes>
       </main>

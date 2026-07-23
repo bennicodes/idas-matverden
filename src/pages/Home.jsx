@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ida from "../assets/images/ida.jpg";
+import ida from "../assets/images/ida-inngang.jpg";
 import pavlovaImg from "../assets/images/idasMatverden/pavlova.jpg";
 import sjokokakeImg from "../assets/images/idasMatverden/sjokokake.jpg";
 import ImageSlider from "../components/ImageSlider/ImageSlider";
@@ -87,7 +87,7 @@ const Home = () => {
           kontakt for et konkret tilbud.
         </p>
 
-        <Link to="/woldstadfjoset#meny" className={styles.callButton}>
+        <Link to="/woldstad#meny" className={styles.callButton}>
           Se hele menyen →
         </Link>
 
@@ -116,11 +116,11 @@ const Home = () => {
       <section className={styles.venue}>
         <h2 className={styles.sectionTitle}>Skal du leie et sted?</h2>
         <p className={styles.aboutText}>
-          Woldstadfjoset er en gammel gård gjort om til restaurant - perfekt for
-          dåp, bryllup og større selskap, med mat fra Idas Matverden.
+          Woldstad er en gammel gård gjort om til restaurant - perfekt for dåp,
+          bryllup og større selskap, med mat fra Idas Matverden.
         </p>
-        <Link to="/woldstadfjoset" className={styles.venueLink}>
-          Se Woldstadfjoset →
+        <Link to="/woldstad" className={styles.venueLink}>
+          Se Woldstad →
         </Link>
       </section>
 

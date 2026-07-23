@@ -18,9 +18,9 @@ import styles from "./Woldstadfjoset.module.css";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
-  name: "Woldstadfjoset",
+  name: "Woldstad",
   image: `${SITE_URL}/og-woldstadfjoset.jpg`,
-  url: `${SITE_URL}/woldstadfjoset`,
+  url: `${SITE_URL}/woldstad`,
   telephone: BUSINESS_PHONE,
   address: { "@type": "PostalAddress", ...BUSINESS_ADDRESS },
   servesCuisine: "Norwegian",
@@ -127,22 +127,22 @@ const prisAccordion = [
   },
 ];
 
-// Telefonnummer til den som driver Woldstadfjoset - bytt ut med reelt nummer.
+// Telefonnummer til den som driver Woldstad - bytt ut med reelt nummer.
 const TELEFON = "959 00 208";
 
 const Woldstadfjoset = () => {
   return (
     <div className={styles.wrap}>
       <Seo
-        title="Woldstadfjoset"
-        description="Woldstadfjoset er en gammel gård i Isfjorden, gjort om til restaurant og selskapslokale, med mat fra Idas Matverden. Book til dåp, bryllup eller annet selskap."
-        path="/woldstadfjoset"
+        title="Woldstad"
+        description="Woldstad er en gammel gård i Isfjorden, gjort om til restaurant og selskapslokale, med mat fra Idas Matverden. Book til dåp, bryllup eller annet selskap."
+        path="/woldstad"
         image="/og-woldstadfjoset.jpg"
         jsonLd={jsonLd}
       />
 
       <header className={styles.hero}>
-        <h1 className={styles.title}>Woldstadfjoset</h1>
+        <h1 className={styles.title}>Woldstad</h1>
         <p className={styles.lead}>
           En gammel gård i Isfjorden, gjort om til restaurant - med mat fra Idas
           Matverden. Se meny under, eller book hele gården til dåp, bryllup
@@ -158,8 +158,8 @@ const Woldstadfjoset = () => {
       <section className={styles.venueSection}>
         <h2 className={styles.sectionTitle}>Om gården</h2>
         <p className={styles.sectionNote}>
-          Woldstadfjoset har røtter tilbake til 1600-tallet, med dyrehold på
-          gården helt frem til tidlig 90-tall. I dag er det gjort om til
+          Woldstad har røtter tilbake til 1600-tallet, med dyrehold på gården
+          helt frem til tidlig 90-tall. I dag er det gjort om til
           selskapslokale, med tre ulike rom som passer for både mindre og større
           grupper.
         </p>
@@ -193,7 +193,7 @@ const Woldstadfjoset = () => {
         <div className={styles.rentalText}>
           <h2 className={styles.sectionTitle}>Leie hele gården</h2>
           <p className={styles.sectionNote}>
-            Woldstadfjoset kan leies til dåp, bryllup og andre større selskap.
+            Woldstad kan leies til dåp, bryllup og andre større selskap.
             Ta kontakt for pris og ledige datoer.
           </p>
           <PrisListe items={lokalePriser} />
@@ -201,7 +201,7 @@ const Woldstadfjoset = () => {
         <div className={styles.rentalImageWrap}>
           <img
             src={woldstadBryllup}
-            alt="Bryllup ved Woldstadfjoset"
+            alt="Bryllup ved Woldstad"
             className={styles.rentalImage}
             loading="lazy"
             decoding="async"

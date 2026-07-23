@@ -3,6 +3,8 @@
 
 export const tapasValg = [
   "Spicy kjøttboller i tomatsaus & parmesan",
+  "Crispy chicken",
+  "Fish roll crispy",
   "Dadler i bacon",
   "Biffspyd med teriyakimarinade",
   "Kyllingvinger i bbq",
