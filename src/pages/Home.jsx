@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ida from "../assets/images/ida-inngang.jpg";
+import ida from "../assets/images/ida.jpg";
 import pavlovaImg from "../assets/images/idasMatverden/pavlova.jpg";
 import sjokokakeImg from "../assets/images/idasMatverden/sjokokake.jpg";
 import ImageSlider from "../components/ImageSlider/ImageSlider";
