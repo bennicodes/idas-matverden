@@ -113,6 +113,23 @@ export const koldtbord = [
     ],
   },
   {
+    navn: "Gubben",
+    pris: "625 kr pr. stk",
+    innhold: [
+      "Fisk fra fjorden med bakt grønnsaker",
+      "Ovnsbakte poteter med urter & salt",
+      "Scampi med hvitløk",
+      "Guacamole",
+      "Frisk salat",
+      "Rekesalat",
+      "Focaccia, smør & aioli",
+      "Baconsnurret kylling",
+      "Røyka laks & eggerøre",
+      "Pastasalat",
+      "Melon med spekeskinke",
+    ],
+  },
+  {
     navn: "Ida's spesial",
     pris: "659 kr pr. stk",
     innhold: [
@@ -164,5 +181,28 @@ export const koldtbord = [
       "Salsa",
       "Rømmedressing",
     ],
+  },
+];
+
+export const påsmurt = [
+  {
+    navn: "snitter",
+    info: "med Reke, Laks, Skinke, Salami, Karbonade, Roastbiff, Sursild, eller Leverpostei",
+    pris: "fra 95kr pr stk",
+  },
+  {
+    navn: "Wrap",
+    info: "med kylling og bacon",
+    pris: "195 kr",
+  },
+  {
+    navn: "Foccacia",
+    info: "med kylling og bacon",
+    pris: "225 kr pr stk",
+  },
+  {
+    navn: "Hjemmelaget bagel",
+    info: "",
+    pris: "195 kr pr stk",
   },
 ];

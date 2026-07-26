@@ -10,7 +10,14 @@ import {
   SITE_URL,
   SOCIAL_LINKS,
 } from "../config/site";
-import { gryter, koldtbord, salater, supper, tapasValg } from "../data/menu";
+import {
+  gryter,
+  koldtbord,
+  påsmurt,
+  salater,
+  supper,
+  tapasValg,
+} from "../data/menu";
 import { cateringTillegg, lokalePriser, servering } from "../data/rental";
 import { gaardBilder, rom } from "../data/woldstadfjosetGallery";
 import styles from "./Woldstadfjoset.module.css";
@@ -115,6 +122,10 @@ const menyAccordion = [
   {
     title: "Salater",
     content: <PrisListe items={salater} note="Minimum 10 personer" />,
+  },
+  {
+    title: "Påsmurt",
+    content: <PrisListe items={påsmurt} />,
   },
 ];
 
