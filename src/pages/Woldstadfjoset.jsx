@@ -15,6 +15,7 @@ import {
   koldtbord,
   påsmurt,
   salater,
+  sjømat,
   supper,
   tapasValg,
 } from "../data/menu";
@@ -127,6 +128,10 @@ const menyAccordion = [
     title: "Påsmurt",
     content: <PrisListe items={påsmurt} />,
   },
+  {
+    title: "Sjømat",
+    content: <PrisListe items={sjømat} />,
+  },
 ];
 
 const prisAccordion = [
@@ -204,8 +209,8 @@ const Woldstadfjoset = () => {
         <div className={styles.rentalText}>
           <h2 className={styles.sectionTitle}>Leie hele gården</h2>
           <p className={styles.sectionNote}>
-            Woldstad kan leies til dåp, bryllup og andre større selskap.
-            Ta kontakt for pris og ledige datoer.
+            Woldstad kan leies til dåp, bryllup og andre større selskap. Ta
+            kontakt for pris og ledige datoer.
           </p>
           <PrisListe items={lokalePriser} />
         </div>

@@ -206,3 +206,16 @@ export const påsmurt = [
     pris: "195 kr pr stk",
   },
 ];
+
+export const sjømat = [
+  {
+    navn: "Havets Blåskjell",
+    info: "med kremet hvitvinsaus, foccacia & aioli",
+    pris: "475 pr stk",
+  },
+  {
+    navn: "Reke kos",
+    info: "med tilbehør",
+    pris: "465 pr stk",
+  },
+];
