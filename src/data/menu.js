@@ -119,7 +119,6 @@ export const koldtbord = [
       "Fisk fra fjorden med bakt grønnsaker",
       "Ovnsbakte poteter med urter & salt",
       "Scampi med hvitløk",
-      "Guacamole",
       "Frisk salat",
       "Rekesalat",
       "Focaccia, smør & aioli",
