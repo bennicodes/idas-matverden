@@ -89,12 +89,21 @@
 }
 
 .romGrid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   gap: var(--spacing-lg);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: var(--spacing-xs);
+}
+
+.romGrid::-webkit-scrollbar {
+  display: none;
 }
 
 .romCard {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
   text-align: center;
 }
 
@@ -111,6 +120,28 @@
   margin-bottom: var(--spacing-sm);
 }
 
+.romImagePair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.romImagePair .romImage {
+  aspect-ratio: 3 / 4;
+  margin-bottom: 0;
+}
+
+.romImagePair .romImage:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.romImagePair .romImage:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 .romTitle {
   font-size: var(--text-lg);
   color: var(--color-primary);
@@ -124,9 +155,17 @@
 
 @media (min-width: 720px) {
   .romGrid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    overflow-x: visible;
+    scroll-snap-type: none;
     max-width: 760px;
     margin: 0 auto;
+  }
+
+  .romCard {
+    flex: initial;
+    scroll-snap-align: none;
   }
 }
 

@@ -1,6 +1,7 @@
 import bryllupSkilt from "../assets/images/woldstad/bryllup-skilt.jpg";
 import woldstadDrivhus from "../assets/images/woldstad/drivhus-woldstad.jpg";
 import woldstadFjos from "../assets/images/woldstad/gard.jpg";
+import pizzahus from "../assets/images/woldstad/pizzahus.jpg";
 import sauefjøset from "../assets/images/woldstad/sauefjoset.png";
 import silostua from "../assets/images/woldstad/silostua.png";
 import woldstadUtsikt from "../assets/images/woldstad/utsikt-fjord.jpg";
@@ -68,5 +69,14 @@ export const rom = [
     bilde: vørstadloftet,
     tekst:
       "Her har vi hatt ulike arrangement som konserter og dans med god stemning utover seinsommer og høst.",
+  },
+  {
+    navn: "Orangeriet",
+    bilde: [
+      { src: pizzahus, alt: "Pizzahus med steinovn ved Orangeriet" },
+      { src: woldstadDrivhus, alt: "Drivhus med sitteplasser og drinker" },
+    ],
+    tekst:
+      "Perfekt for grupper på 10-20 personer. Benytt dere av pizzahuset og nyt sommerstemning med drinker.",
   },
 ];

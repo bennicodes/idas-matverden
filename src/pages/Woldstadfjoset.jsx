@@ -185,7 +185,20 @@ const Woldstadfjoset = () => {
         <div className={styles.romGrid}>
           {rom.map((r) => (
             <article key={r.navn} className={styles.romCard}>
-              {r.bilde ? (
+              {Array.isArray(r.bilde) ? (
+                <div className={styles.romImagePair}>
+                  {r.bilde.map((b) => (
+                    <img
+                      key={b.src}
+                      src={b.src}
+                      alt={b.alt}
+                      className={styles.romImage}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ))}
+                </div>
+              ) : r.bilde ? (
                 <img
                   src={r.bilde}
                   alt={r.navn}

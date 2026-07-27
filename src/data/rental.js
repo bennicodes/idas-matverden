@@ -24,6 +24,7 @@ export const lokalePriser = [
   },
   { navn: "Sauefjøset", pris: "1 000 kr" },
   { navn: "Vørstaloftet", pris: "Ta kontakt for pris" },
+  { navn: "Orangeriet", pris: "1 000 kr" },
 ];
 
 export const cateringTillegg = [
