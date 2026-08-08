@@ -4,7 +4,7 @@ export const servering = [
   {
     navn: "Velkomstdrink",
     info: "uten / med alkohol",
-    pris: "79 / 95 kr pr. pers.",
+    pris: "95 kr pr. pers.",
   },
   { navn: "Kaffe", pris: "45 kr pr. stk." },
   { navn: "Dessert", pris: "139 kr pr. stk." },
