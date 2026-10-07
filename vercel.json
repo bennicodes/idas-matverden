@@ -1,3 +1,6 @@
 {
+  "redirects": [
+    { "source": "/woldstadfjoset", "destination": "/woldstad", "permanent": true }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
