@@ -45,12 +45,12 @@
   color: var(--color-text);
 }
 
-/* Pilene trengs bare med mus - på touch sveiper man */
+/* Knappene trengs bare med mus - på touch sveiper man */
 .controls {
   display: none;
 }
 
-.arrow {
+.control {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -67,7 +67,7 @@
     opacity 180ms ease;
 }
 
-.arrow svg {
+.control svg {
   width: 20px;
   height: 20px;
   fill: none;
@@ -77,12 +77,12 @@
   stroke-linejoin: round;
 }
 
-.arrow:hover:not(:disabled) {
+.control:hover:not(:disabled) {
   background: var(--color-bg-alt);
   border-color: var(--color-page-bg);
 }
 
-.arrow:disabled {
+.control:disabled {
   opacity: 0.35;
   cursor: default;
 }
@@ -111,6 +111,56 @@
     gap: var(--spacing-sm);
     margin-top: var(--spacing-md);
   }
+}
+
+/* ---------- Loop (kun mus, uten "reduser bevegelse") ---------- */
+.viewport {
+  overflow: hidden;
+  container-type: inline-size;
+  padding-bottom: var(--spacing-xs);
+  /* Myk overgang i kantene så bildene glir inn og ut */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 3%,
+    #000 97%,
+    transparent
+  );
+}
+
+.loop {
+  list-style: none;
+  display: flex;
+  width: max-content;
+  animation: loop var(--loop-duration, 42s) linear infinite;
+}
+
+/* Mellomrom som padding (ikke gap), så -50% treffer nøyaktig og loopen blir sømløs */
+.loop .item {
+  flex: 0 0 calc(36cqi + var(--spacing-lg));
+  padding-right: var(--spacing-lg);
+}
+
+@container (max-width: 900px) {
+  .loop .item {
+    flex-basis: calc(44cqi + var(--spacing-lg));
+  }
+}
+
+.viewport:hover .loop,
+.paused .loop {
+  animation-play-state: paused;
+}
+
+@keyframes loop {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.control .iconFilled {
+  fill: currentColor;
+  stroke: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
