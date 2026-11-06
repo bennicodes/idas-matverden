@@ -43,10 +43,6 @@ const Home = () => {
           <h1 className={styles.title}>
             Mat laget med <em>kjærlighet</em>, til alle anledninger
           </h1>
-          <p className={styles.lead}>
-            Koldtbord, varmmat og dessert til minnestund, dåp, bursdag og
-            bryllup – fra Idas Matverden i Isfjorden.
-          </p>
           <div className={styles.heroActions}>
             <a
               className={styles.callButton}
@@ -159,8 +155,9 @@ const Home = () => {
       <section className={styles.venue}>
         <h2 className={styles.sectionTitle}>Skal du leie et sted?</h2>
         <p className={styles.aboutText}>
-          Woldstad er en gammel gård gjort om til restaurant - perfekt for dåp,
-          bryllup og større selskap, med mat fra Idas Matverden.
+          Woldstad er en gammel gård i Isfjorden gjort om til restaurant -
+          perfekt for dåp, bryllup og større selskap, med mat fra Idas
+          Matverden.
         </p>
         <Link to="/woldstad" className={styles.venueLink}>
           Se Woldstad →

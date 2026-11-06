@@ -36,15 +36,6 @@
   color: var(--color-primary);
 }
 
-.lead {
-  margin-top: var(--spacing-lg);
-  color: var(--color-text-muted);
-  font-size: var(--text-lg);
-  line-height: 1.5;
-  max-width: 34ch;
-  text-wrap: pretty;
-}
-
 .heroActions {
   display: flex;
   flex-wrap: wrap;
