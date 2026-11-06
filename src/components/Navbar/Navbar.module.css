@@ -27,6 +27,14 @@
 .logoText {
   font-family: var(--font-display);
   font-size: var(--text-lg);
+  white-space: nowrap;
+}
+
+/* Smale telefoner (360-400px): litt mindre logo så alt får plass på én linje */
+@media (max-width: 400px) {
+  .logoText {
+    font-size: 1.0625rem;
+  }
 }
 
 .logoBadge {

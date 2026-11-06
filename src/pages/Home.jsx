@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import ida from "../assets/images/ida.jpg";
 import pavlovaImg from "../assets/images/idasMatverden/pavlova.jpg";
 import sjokokakeImg from "../assets/images/idasMatverden/sjokokake.jpg";
-import ImageSlider from "../components/ImageSlider/ImageSlider";
 import Seo from "../components/Seo/Seo";
 import {
   BUSINESS_ADDRESS,
@@ -39,44 +38,88 @@ const Home = () => {
         jsonLd={jsonLd}
       />
 
-      <div className={styles.heroWrap}>
-        <header className={styles.hero}>
-          <div className={styles.titleContainer}>
-            <h1 className={styles.title}>Idas Matverden</h1>
-            <div className={styles.underline}></div>
-            <p className={styles.tagline}>
-              Lager mat med kjærlighet til alle anledninger.
-            </p>
+      <header className={styles.hero}>
+        <div className={styles.heroText}>
+          <h1 className={styles.title}>
+            Mat laget med <em>kjærlighet</em>, til alle anledninger
+          </h1>
+          <p className={styles.lead}>
+            Koldtbord, varmmat og dessert til minnestund, dåp, bursdag og
+            bryllup – fra Idas Matverden i Isfjorden.
+          </p>
+          <div className={styles.heroActions}>
+            <a
+              className={styles.callButton}
+              href={`tel:${TELEFON.replace(/\s/g, "")}`}
+            >
+              Ring {TELEFON}
+            </a>
+            <Link to="/woldstad#meny" className={styles.heroLink}>
+              Se menyen →
+            </Link>
           </div>
-        </header>
-
-        <div className={styles.heroImage}>
-          <ImageSlider images={heroBilder} className={styles.heroImageFrame} />
         </div>
-      </div>
 
-      {/* --- REDIGER HER --- kort tekst om Ida selv */}
-      <section className={styles.about}>
-        <h2 className={styles.sectionTitle}>Om Ida</h2>
-        <div className={styles.aboutWrap}>
-          <div className={styles.aboutTextWrap}>
-            <p className={styles.aboutText}>
-              Ida driver Idas Matverden og lager mat til alt fra minnestunder og
-              dåp til bursdager og bryllup.
-            </p>
-            <p className={styles.aboutText}>
-              Ta kontakt for en uforpliktende prat om hva som passer for din
-              anledning.
-            </p>
-          </div>
-          <div className={styles.imageContainer}>
-            <img
-              src={ida}
-              alt="Ida. Eier av idas matverden"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
+        <div className={styles.collage}>
+          {heroBilder.map((bilde, i) => (
+            <figure
+              key={bilde.src}
+              className={`${styles.photo} ${styles[`photo${i + 1}`]}`}
+            >
+              <img
+                src={bilde.src}
+                alt={bilde.alt}
+                fetchPriority={i === 0 ? "high" : undefined}
+                decoding="async"
+              />
+              <figcaption>{bilde.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </header>
+
+      {/* --- REDIGER HER --- Idas egen tekst om seg selv */}
+      <section className={styles.about} aria-labelledby="om-meg">
+        <div className={styles.portrait}>
+          <img
+            src={ida}
+            alt="Ida, som driver Idas Matverden"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
+        <div className={styles.letter}>
+          <h2 id="om-meg" className={styles.letterTitle}>
+            Litt om meg
+          </h2>
+          <p className={styles.greeting}>
+            Så utrolig koselig at du har funnet veien hit til min lille
+            matverden!
+          </p>
+          <p>
+            Jeg heter Ida, og jeg har en stor kjærlighet for matlaging, gode
+            smaker og alt det fine som skjer når mennesker samles rundt et bord.
+            Jeg elsker å lage mat og søte fristelser som kan spre glede, varme og
+            små øyeblikk å ta vare på.
+          </p>
+          <p>
+            Hos Idas Matverden tilbyr jeg catering, selskapsmat og bakst til
+            både små og store anledninger.
+          </p>
+          <p>
+            For meg er det viktig at det jeg lager kommer fra hjertet. Hver
+            eneste bestilling får litt ekstra kjærlighet, omtanke og personlig
+            preg.
+          </p>
+          <p>
+            Det er en stor glede å få bidra til dine små og store feiringer, og
+            jeg håper jeg får lage noe godt til nettopp deg!
+          </p>
+          <p className={styles.signoff}>
+            Med masse kjærlighet,
+            <span className={styles.signature}>Ida</span>
+          </p>
         </div>
       </section>
 

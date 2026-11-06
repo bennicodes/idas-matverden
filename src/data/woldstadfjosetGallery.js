@@ -10,36 +10,38 @@ import woldstadInngang from "../assets/images/woldstad/woldstad-inngang.jpg";
 import woldstadResturantFjos from "../assets/images/woldstad/woldstad-resturant.jpg";
 import woldstadGård from "../assets/images/woldstad/woldstadfjoset-ute.jpg";
 
+// --- REDIGER HER --- bildene i stripen øverst på Woldstad-siden.
+// caption vises under hvert bilde.
 export const gaardBilder = [
   {
     src: bryllupSkilt,
-    alt: "Skilt til bryllup på Wolstad",
-    caption: "",
+    alt: "Skilt til bryllup på Woldstad",
+    caption: "Bryllup på Woldstad",
   },
   {
     src: woldstadFjos,
     alt: "Woldstad restaurant i gammelt fjøs",
-    caption: "",
+    caption: "Fjøset ved fjorden",
   },
   {
     src: woldstadGård,
     alt: "Woldstad gård",
-    caption: "",
+    caption: "Gårdstunet",
   },
   {
     src: woldstadUtsikt,
     alt: "Uteplass med utsikt mot fjorden",
-    caption: "",
+    caption: "Uteplassen mot fjorden",
   },
   {
     src: woldstadDrivhus,
     alt: "Drivhus og uteplass ved inngangen til fjøset",
-    caption: "",
+    caption: "Orangeriet",
   },
   {
     src: woldstadInngang,
     alt: "Inngang til fjøset",
-    caption: "",
+    caption: "Inngangen til fjøset",
   },
 ];
 

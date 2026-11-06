@@ -1,7 +1,7 @@
 import woldstadBryllup from "../assets/images/woldstad/bryllup.jpg";
 import Accordion from "../components/Accordion/Accordion";
 import ImagePlaceholder from "../components/ImagePlaceholder/ImagePlaceholder";
-import ImageSlider from "../components/ImageSlider/ImageSlider";
+import ImageStrip from "../components/ImageStrip/ImageStrip";
 import Seo from "../components/Seo/Seo";
 import {
   BUSINESS_ADDRESS,
@@ -167,7 +167,7 @@ const Woldstadfjoset = () => {
       </header>
 
       <div className={styles.heroImage}>
-        <ImageSlider images={gaardBilder} />
+        <ImageStrip images={gaardBilder} label="Bilder fra gården" />
       </div>
 
       {/* --- REDIGER HER --- utfyll/juster med reell info om utleie */}

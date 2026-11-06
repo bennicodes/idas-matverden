@@ -1,0 +1,120 @@
+.strip {
+  position: relative;
+}
+
+.track {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-md);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  padding-bottom: var(--spacing-xs);
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobil: ett bilde + en bit av neste */
+.item {
+  flex: 0 0 84%;
+  scroll-snap-align: start;
+}
+
+.figure {
+  margin: 0;
+}
+
+.figure img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  background: var(--color-bg-alt);
+}
+
+.figure figcaption {
+  margin-top: var(--spacing-sm);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-md);
+  color: var(--color-text);
+}
+
+/* Pilene trengs bare med mus - på touch sveiper man */
+.controls {
+  display: none;
+}
+
+.arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-line);
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease;
+}
+
+.arrow svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.arrow:hover:not(:disabled) {
+  background: var(--color-bg-alt);
+  border-color: var(--color-page-bg);
+}
+
+.arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+@media (min-width: 720px) {
+  .track {
+    gap: var(--spacing-lg);
+  }
+
+  /* To bilder + en bit av det tredje */
+  .item {
+    flex-basis: 44%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .item {
+    flex-basis: 36%;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    scroll-behavior: auto;
+  }
+}
