@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div className={styles.wrap}>
       <Seo
-        title="Idas Matverden"
+        title="Catering i Isfjorden"
         description="Idas Matverden leverer catering til fest og hverdag i Isfjorden - koldtbord, varmmat og dessert laget med hjerte for anledningen din."
         path="/"
         jsonLd={jsonLd}
